@@ -1,0 +1,4 @@
+SELECT ojs.authors.country, ojs.authors.author_id, ojs.submissions.submission_id
+FROM ojs.authors JOIN ojs.submissions
+ON ojs.authors.submission_id=ojs.submissions.submission_id
+WHERE ojs.submissions.context_id="30" AND ojs.submissions.status="3" AND ojs.submissions.date_status_modified LIKE "2019%";
